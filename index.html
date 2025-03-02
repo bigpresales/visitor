@@ -9,7 +9,7 @@
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
         .form-group { margin-bottom: 15px; }
         label { display: block; margin-bottom: 5px; }
-        input, button { width: 100%; padding: 10px; }
+        input, button { width: 100%; padding: 10px; box-sizing: border-box; }
     </style>
 </head>
 <body>
@@ -19,7 +19,7 @@
             <label for="vorname">Vorname</label>
             <input type="text" id="vorname" required>
         </div>
-        class="form-group">
+        <div class="form-group">
             <label for="nachname">Nachname</label>
             <input type="text" id="nachname" required>
         </div>
@@ -43,7 +43,7 @@
             const checkInTime = new Date().toLocaleString();
 
             // Generate URL
-            const url = `brotherwebprint://filename=visitor.lbx&rd54.bin&text1=${vorname}&text2=${nachname}&text3=${email}&text4=${kontakt}`;
+            const url = `brotherwebprint://filename=visitor.lbx&rd54.bin&text1=${encodeURIComponent(vorname)}&text2=${encodeURIComponent(nachname)}&text3=${encodeURIComponent(email)}&text4=${encodeURIComponent(kontakt)}`;
             window.open(url, '_blank');
 
             // Save check-in data to localStorage
