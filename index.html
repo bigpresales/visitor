@@ -135,7 +135,7 @@
             const checkInTime = new Date().toLocaleString();
 
             // Generate URL
-            const url = `brotherwebprint://print?filename=visitor.lbx&size=RollW54&text1=${encodeURIComponent(vorname)}&text2=${encodeURIComponent(nachname)}&text3=${encodeURIComponent(firmenname)}&text4=${encodeURIComponent(email)}&text5=${encodeURIComponent(kontakt)}`;
+            const url = `brotherwebprint://print?filename=visitor.lbx&size=RollW54&text_vorname=${encodeURIComponent(vorname)}&text_nachname=${encodeURIComponent(nachname)}&text_firmenname=${encodeURIComponent(firmenname)}&text_email=${encodeURIComponent(email)}&text_kontakt=${encodeURIComponent(kontakt)}`;
             window.open(url, '_blank');
 
             // Save check-in data to localStorage
