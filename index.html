@@ -65,7 +65,7 @@
 
         <div class="form-group">
             <label for="email">Email Adresse</label>
-            <input type="email" id="email" required>
+            <input type="text" id="email" required>
         </div>
         <div class="form-group">
             <label for="kontakt">Brother Kontakt</label>
@@ -89,7 +89,7 @@
 
             // Save check-in data to localStorage
             const checkInData = JSON.parse(localStorage.getItem('checkInData')) || [];
-            checkInData.push({ vorname, nachname, email, kontakt, checkInTime, checkedOut: false });
+            checkInData.push({ vorname, nachname,firmenname, email, kontakt, checkInTime, checkedOut: false });
             localStorage.setItem('checkInData', JSON.stringify(checkInData));
         }
     </script>
